@@ -32,19 +32,52 @@ import Hero from './components/Hero';
 import './App.css'
 import ErrorBoundary from './components/ErrorBoundary';
 import ClickCounter from './components/ClickCounter';
+import HoverCounter from './components/HoverCounter';
+import ClickCounteTwor from './components/ClickCounteTwor';
+import HoverCountertwo from './components/HoverCountertwo';
+import User from './components/User';
+import Counter123 from './components/Counter123';
+import { UserProvider } from './components/UserContext';
+import ComponentC from './components/ComponentC';
 class App extends Component {
   render() {
     return (
       
        <div className="App">
+      <UserProvider value="anjana">
+      <ComponentC/>
+      </UserProvider>
+
+       
+        {/* <Counter123 
+        render={(count,incrementCount)=>
+        (<ClickCounteTwor count={count} incrementCount={incrementCount}/>
+        )}
+        />
+        
+        <Counter123 
+        render={(count,incrementCount)=>
+        (<HoverCountertwo count={count} incrementCount={incrementCount}/>
+        )}
+        />
+         */}
+    
 
 
-        <ClickCounter/>
+{/* 
+  <User render={(isLoggedIn)=>isLoggedIn?'Anjana':'guest'}/>
+        <ClickCounteTwor/>
+        <HoverCountertwo/> */}
+       {/* <ClickCounter name="Anjana" />
+
+<HoverCounter/> */}
+
+        {/* <ClickCounter/>
       <ErrorBoundary>
     <Hero heroName="asha"/></ErrorBoundary>
     <ErrorBoundary> <Hero heroName="pallavi"/></ErrorBoundary>
     <ErrorBoundary><Hero heroName="anjana"/>
-    </ErrorBoundary>
+    </ErrorBoundary> */}
     
       {/* <Hero heroName="anjana"/> */}
        {/* <PortalDemo/> */}
